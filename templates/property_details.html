@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Rental Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %} <!-- Include the header template here -->
+
+    <h1>Property Details</h1>
+    <h2>{{ property['title'] }}</h2>
+    <p>{{ property['description'] }}</p>
+    <p>Location: {{ property['location'] }}</p>
+    <p>Price: {{ property['price'] }}</p>
+    <p>Property Type: {{ property['property_type'] }}</p>
+    <p>Accommodates: {{ property['accommodates'] }}</p>
+    <p>Bedrooms: {{ property['bedrooms'] }}</p>
+    <p>Bathrooms: {{ property['bathrooms'] }}</p>
+    <p>Amenities: {{ property['amenities'] }}</p>
+</body>
+</html>

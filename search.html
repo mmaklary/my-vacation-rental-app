@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Rental Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %} <!-- Include the header template here -->
+
+    <h1>Search Properties</h1>
+    <form method="POST" action="{{ url_for('search') }}">
+        <!-- Your search form fields go here -->
+        <input type="text" name="location" placeholder="Location">
+        <input type="text" name="checkin" placeholder="Check-in Date">
+        <input type="text" name="checkout" placeholder="Check-out Date">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

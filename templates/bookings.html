@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Rental Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %} <!-- Include the header template here -->
+
+    <h1>Your Bookings</h1>
+    <ul>
+        {% for booking in bookings %}
+        <li>
+            <h3>Property: {{ booking['property_name'] }}</h3>
+            <p>Check-in: {{ booking['check_in_date'] }}</p>
+            <p>Check-out: {{ booking['check_out_date'] }}</p>
+            <p>Total Price: {{ booking['total_price'] }} EUR</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
